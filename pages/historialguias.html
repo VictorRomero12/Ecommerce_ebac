@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand">
+          <img src="../img/logo.png" alt="Logo de Hound Express" />
+        </div>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/formulario.html">Registro de guías</a></li>
+          <li><a href="../pages/estado.html">Estado general</a></li>
+          <li>
+            <a href="../pages/listaguias.html" 
+              >Lista de guías</a
+            >
+          </li>
+          <li><a href="../pages/buscarguias.html">Buscar guías</a></li>
+          <li><a href="../pages/historialguias.html" style="color: blue">Historial de guías</a></li>
+        </ul>
+      </nav>
+
+      <div class="form-container">
+        <h1>Historial de guías</h1>
+        <div class="history-container">
+            <div class="history-filters">
+                <input type="date" class="date-filter" />
+                <select class="status-filter">
+                    <option value="">Todos los estados</option>
+                    <option value="pending">Pendiente</option>
+                    <option value="transit">En tránsito</option>
+                    <option value="delivered">Entregado</option>
+                </select>
+            </div>
+
+            <div class="history-list">
+                <div class="history-item">
+                    <div class="history-header">
+                        <h3>Guía #GU-2024-001</h3>
+                        <span class="date">15 Ene 2024</span>
+                    </div>
+                    <div class="history-timeline">
+                        <div class="timeline-item completed">
+                            <span class="time">09:00</span>
+                            <p>Guía creada en Ciudad de México</p>
+                        </div>
+                        <div class="timeline-item completed">
+                            <span class="time">11:30</span>
+                            <p>En tránsito hacia Guadalajara</p>
+                        </div>
+                        <div class="timeline-item current">
+                            <span class="time">14:30</span>
+                            <p>Llegada a centro de distribución</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-item">
+                    <div class="history-header">
+                        <h3>Guía #GU-2024-002</h3>
+                        <span class="date">14 Ene 2024</span>
+                    </div>
+                    <div class="history-timeline">
+                        <div class="timeline-item completed">
+                            <span class="time">10:00</span>
+                            <p>Guía creada en Monterrey</p>
+                        </div>
+                        <div class="timeline-item completed">
+                            <span class="time">12:00</span>
+                            <p>En proceso de recolección</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .history-container {
+                padding: 20px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .history-filters {
+                display: flex;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+
+            .date-filter,
+            .status-filter {
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            .history-item {
+                background: white;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            .history-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .history-header h3 {
+                margin: 0;
+                color: #333;
+            }
+
+            .date {
+                color: #666;
+            }
+
+            .history-timeline {
+                position: relative;
+                padding-left: 30px;
+            }
+
+            .timeline-item {
+                position: relative;
+                padding-bottom: 20px;
+                padding-left: 20px;
+            }
+
+            .timeline-item:before {
+                content: '';
+                position: absolute;
+                left: -5px;
+                top: 0;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #ddd;
+            }
+
+            .timeline-item:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 12px;
+                bottom: 0;
+                width: 2px;
+                background: #ddd;
+            }
+
+            .timeline-item:last-child:after {
+                display: none;
+            }
+
+            .timeline-item.completed:before {
+                background: #4CAF50;
+            }
+
+            .timeline-item.current:before {
+                background: #2196F3;
+            }
+
+            .time {
+                font-weight: bold;
+                color: #666;
+            }
+
+            .timeline-item p {
+                margin: 5px 0 0;
+                color: #333;
+            }
+        </style>
+        
+      </div>
+</body>
+</html>
