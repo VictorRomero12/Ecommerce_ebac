@@ -5,127 +5,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista de guías</title>
     <link rel="stylesheet" href="../css/style.css" />
-
-    <style>
-    
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
-    <nav class="main-nav">
-      <div class="nav-brand">
-        <img src="../img/logo.png" alt="Logo de Hound Express" />
-      </div>
-      <ul class="nav-menu">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="../pages/formulario.html">Registro de guías</a></li>
-        <li><a href="../pages/estado.html">Estado general</a></li>
-        <li>
-          <a href="../pages/listaguias.html" style="color: blue"
-            >Lista de guías</a
-          >
-        </li>
-        <li><a href="../pages/buscarguias.html">Buscar guías</a></li>
-        <li><a href="../pages/historialguias.html">Historial de guías</a></li>
-      </ul>
-    </nav>
-    <div class="form-container">
-      <h1>Lista de Guías</h1>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-brand">
+          <img src="../img/logo.png" alt="Logo de Hound Express" />
+        </div>
+        <ul class="nav-menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/formulario.html">Registro de guías</a></li>
+          <li><a href="../pages/estado.html">Estado general</a></li>
+          <li>
+            <a href="../pages/listaguias.html" style="color: blue">Lista de guías</a>
+          </li>
+          <li><a href="../pages/buscarguias.html">Buscar guías</a></li>
+          <li><a href="../pages/historialguias.html">Historial de guías</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <table class="guides-table">
-        <thead>
-          <tr>
-            <th>Número de Guía</th>
-            <th>Estado</th>
-            <th>Origen</th>
-            <th>Destino</th>
-            <th>Última Actualización</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>GU-2024-001</strong></td>
-            <td>
-              <span class="status-badge status-transit">En tránsito</span>
-            </td>
-            <td>Ciudad de México</td>
-            <td>Guadalajara</td>
-            <td>15 Ene 2024, 14:30</td>
-            <td>
-              <button class="btn-update">
-                <i class="fas fa-sync-alt btn-icon"></i>
-                <span class="btn-text">Actualizar</span>
-              </button>
-              <button class="btn-history">
-                <i class="fas fa-history btn-icon"></i>
-                <span class="btn-text">Historial</span>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>GU-2024-002</strong></td>
-            <td><span class="status-badge status-pending">Pendiente</span></td>
-            <td>Monterrey</td>
-            <td>Cancún</td>
-            <td>14 Ene 2024, 09:15</td>
-            <td>
-              <button class="btn-update">
-                <i class="fas fa-sync-alt btn-icon"></i>
-                <span class="btn-text">Actualizar</span>
-              </button>
-              <button class="btn-history">
-                <i class="fas fa-history btn-icon"></i>
-                <span class="btn-text">Historial</span>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>GU-2024-003</strong></td>
-            <td>
-              <span class="status-badge status-delivered">Entregado</span>
-            </td>
-            <td>Puebla</td>
-            <td>Veracruz</td>
-            <td>13 Ene 2024, 16:45</td>
-            <td>
-              <button class="btn-update">
-                <i class="fas fa-sync-alt btn-icon"></i>
-                <span class="btn-text">Actualizar</span>
-              </button>
-              <button class="btn-history">
-                <i class="fas fa-history btn-icon"></i>
-                <span class="btn-text">Historial</span>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <main>
+      <section class="form-container">
+        <header>
+          <h1>Lista de Guías</h1>
+        </header>
+
+        <div class="table-wrapper">
+          <table class="guides-table">
+            <thead>
+              <tr>
+                <th>Número de Guía</th>
+                <th>Estado</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Última Actualización</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="guide-info">
+                    <strong>GU-2024-001</strong>
+                  </div>
+                </td>
+                <td>
+                  <span class="status-badge status-transit">En tránsito</span>
+                </td>
+                <td>
+                  <div class="location-info">
+                    <span>Ciudad de México</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="location-info">
+                    <span>Guadalajara</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="date-info">
+                    <span>15 Ene 2024, 14:30</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-update">
+                      <i class="fas fa-sync-alt btn-icon"></i>
+                      <span class="btn-text">Actualizar</span>
+                    </button>
+                    <button class="btn-history">
+                      <i class="fas fa-history btn-icon"></i>
+                      <span class="btn-text">Historial</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="guide-info">
+                    <strong>GU-2024-002</strong>
+                  </div>
+                </td>
+                <td>
+                  <span class="status-badge status-pending">Pendiente</span>
+                </td>
+                <td>
+                  <div class="location-info">
+                    <span>Monterrey</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="location-info">
+                    <span>Cancún</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="date-info">
+                    <span>14 Ene 2024, 09:15</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-update">
+                      <i class="fas fa-sync-alt btn-icon"></i>
+                      <span class="btn-text">Actualizar</span>
+                    </button>
+                    <button class="btn-history">
+                      <i class="fas fa-history btn-icon"></i>
+                      <span class="btn-text">Historial</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="guide-info">
+                    <strong>GU-2024-003</strong>
+                  </div>
+                </td>
+                <td>
+                  <span class="status-badge status-delivered">Entregado</span>
+                </td>
+                <td>
+                  <div class="location-info">
+                    <span>Puebla</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="location-info">
+                    <span>Veracruz</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="date-info">
+                    <span>13 Ene 2024, 16:45</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="action-buttons">
+                    <button class="btn-update">
+                      <i class="fas fa-sync-alt btn-icon"></i>
+                      <span class="btn-text">Actualizar</span>
+                    </button>
+                    <button class="btn-history">
+                      <i class="fas fa-history btn-icon"></i>
+                      <span class="btn-text">Historial</span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
 
     <footer class="main-footer">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>Hound Express</h3>
-            <p>Soluciones logísticas confiables para tu negocio</p>
-          </div>
-          <div class="footer-section">
-            <h3>Contacto</h3>
-            <p>Email: contacto@houndexpress.com</p>
-            <p>Tel: (55) 1234-5678</p>
-            <p>Dirección: Av. Principal #123, CDMX</p>
-          </div>
-          <div class="footer-section">
-            <h3>Enlaces Rápidos</h3>
-            <ul>
-              <li><a href="pages/formulario.html">Registro de guías</a></li>
-              <li><a href="pages/estado.html">Estado general</a></li>
-              <li><a href="pages/listaguias.html">Lista de guías</a></li>
-            </ul>
-          </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Hound Express</h3>
+          <p>Soluciones logísticas confiables para tu negocio</p>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; 2024 Hound Express. Todos los derechos reservados.</p>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <p>Email: contacto@houndexpress.com</p>
+          <p>Tel: (55) 1234-5678</p>
+          <p>Dirección: Av. Principal #123, CDMX</p>
         </div>
-      </footer>
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="pages/formulario.html">Registro de guías</a></li>
+            <li><a href="pages/estado.html">Estado general</a></li>
+            <li><a href="pages/listaguias.html">Lista de guías</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Hound Express. Todos los derechos reservados.</p>
+      </div>
+    </footer>
   </body>
 </html>
